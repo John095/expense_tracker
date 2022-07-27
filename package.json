@@ -1,0 +1,33 @@
+{
+  "name": "expense_tracker",
+  "version": "1.0.0",
+  "description": "BAckend for expense tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "npx concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --client && npm run build --client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/John095/expense_tracker.git"
+  },
+  "author": "John095",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/John095/expense_tracker/issues"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "homepage": "https://github.com/John095/expense_tracker#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6",
+    "morgan": "^1.10.0"
+  }
+}
